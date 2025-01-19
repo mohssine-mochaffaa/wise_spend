@@ -1,6 +1,7 @@
 import { useState } from "react";
 
 const InputField = ({ type, placeholder, icon,setData }) => {
+
   // State to toggle password visibility
   const [isPasswordShown, setIsPasswordShown] = useState(false);
 
@@ -12,6 +13,7 @@ const InputField = ({ type, placeholder, icon,setData }) => {
         className="input-field"
         required
         onChange={(e)=> setData(e.target.value)}
+
       />
       <i className="material-symbols-rounded">{icon}</i>
       {type === 'password' && (

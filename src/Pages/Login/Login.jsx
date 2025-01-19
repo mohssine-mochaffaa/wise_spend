@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import { Link, useNavigate } from "react-router-dom";
+
 import InputField from '../../Components/InputField/InputField'
 import "./Login.css"
 import loginImg from "../../assets/loginImg.png"
@@ -59,6 +60,7 @@ const Login = () => {
       </div>
     )}
     </div>
+
   )
 }
 
