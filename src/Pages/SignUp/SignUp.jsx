@@ -1,10 +1,6 @@
-<<<<<<< HEAD
 import React, { useState } from 'react'
 import { Link, useNavigate } from "react-router-dom";
-=======
-import React from 'react'
-import { Link } from "react-router-dom";
->>>>>>> 1e1a742d40fb57b6f94526fd0b2dd358704ab999
+
 import InputField from '../../Components/InputField/InputField'
 import "./SignUp.css"
 import loginImg from "../../assets/loginImg.png"
@@ -47,7 +43,6 @@ const SignUp = () => {
 
 
   return (
-<<<<<<< HEAD
     <div className='login'>
           <div className="loginBox">
             <img src={loginImg} alt="" />
@@ -59,16 +54,7 @@ const SignUp = () => {
             <InputField setData={setName} type="text" placeholder="Full Name" icon="id_card" />
             <InputField setData={setEmail} type="email" placeholder="Email address" icon="mail" />
             <InputField setData={setPassword} type="password" placeholder="Password" icon="lock" />
-=======
-    <div className="login-container">
-          <h2 className="form-title">Sign Up</h2>
-          <p className="separator"></p>
-    
-          <form action="#" className="login-form">
-            <InputField type="text" placeholder="Full Name" icon="id_card" />
-            <InputField type="email" placeholder="Email address" icon="mail" />
-            <InputField type="password" placeholder="Password" icon="lock" />
->>>>>>> 1e1a742d40fb57b6f94526fd0b2dd358704ab999
+
     
             <button type="submit" className="login-button">Sign Up</button>
           </form>
@@ -77,11 +63,8 @@ const SignUp = () => {
             If you have an account? <Link to="/" className="signup-link">Login</Link>
           </p>
     </div>
-<<<<<<< HEAD
             </div>
     </div>
-=======
->>>>>>> 1e1a742d40fb57b6f94526fd0b2dd358704ab999
   )
 }
 
