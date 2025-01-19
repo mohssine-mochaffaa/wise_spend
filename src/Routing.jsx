@@ -13,6 +13,8 @@ import SignUp from './Pages/SignUp/SignUp';
 import Dashboard from './Pages/Dashboard/Dashboard';
 
 import NotFound from './Pages/NotFound/NotFound';
+import Nav from './Components/Nav/Nav';
+import Account from './Pages/Account/Account';
   
 
 function Routings() {
@@ -50,11 +52,15 @@ return false;
  
   return (
     <Router> 
+      <Nav/>
     <Routes> 
+    {user && (<Route exact path='/' element={<Dashboard/>}></Route>)}
+    {!user && (<Route exact path='/' element={< Login />}></Route>)}
 
-    <Route exact path='/' element={< Login />}></Route>
-    <Route exact path='/signUp' element={< SignUp />}></Route>
+    <Route exact path='/signUp' element={user ? <Dashboard/> : < SignUp />}></Route>
     <Route exact path='/dashboard' element={< Dashboard />}></Route>
+    {user && (<Route exact path='/accountProfile' element={<Account/>}></Route>)}
+
     <Route  path='/*' element={< NotFound />}></Route>
 
 
